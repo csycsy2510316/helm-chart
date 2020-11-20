@@ -7,7 +7,9 @@ helm-chart
 ### 安装 Chart
 
 ```
-$ helm install hepeng/postwoman
+$ helm repo add hepeng-repo https://csycsy2510316.github.io/helm-chart
+$ helm search repo postwoman
+$ helm install postwoman hepeng-repo/postwoman
 ```
 
 ### 配置信息
