@@ -1,7 +1,7 @@
 apiVersion: v1
 appVersion: v1.9.9
 description: Chart for Postwoman
-home: https://github.com/csycsy2510316/postwoman-helm-chart
+home: https://github.com/csycsy2510316/helm-chart/tree/master/helm-chart-sources/postwoman-helm-chart
 maintainers:
 - email: csycsy2510316@163.com
   name: hepeng
