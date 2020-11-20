@@ -3,7 +3,7 @@ entries:
   postwoman:
   - apiVersion: v1
     appVersion: v1.9.9
-    created: "2020-11-20T15:05:06.424904+08:00"
+    created: "2020-11-20T15:15:26.627874+08:00"
     description: Chart for Postwoman
     digest: 702aefc0b572c80e42f6c3fd08e49594508bade08a241024b3cb4cfe441543c8
     home: https://github.com/csycsy2510316/postwoman-helm-chart
@@ -21,6 +21,6 @@ entries:
     - https://registry.hub.docker.com/r/liyasthomas/postwoman
     - https://github.com/hoppscotch/hoppscotch
     urls:
-    - https://github.com/csycsy2510316/helm-chart/postwoman-1.0.0.tgz
+    - https://csycsy2510316.github.io/helm-chart/postwoman-1.0.0.tgz
     version: 1.0.0
-generated: "2020-11-20T15:05:06.423401+08:00"
+generated: "2020-11-20T15:15:26.626767+08:00"
