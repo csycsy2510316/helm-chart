@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-postwoman
+  labels:
+    app: postwoman
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 3000
+      protocol: TCP
+      name: web
+      nodePort: {{ .Values.service.nodePort }}
+  selector:
+    app: postwoman
+    release: {{ .Release.Name }}

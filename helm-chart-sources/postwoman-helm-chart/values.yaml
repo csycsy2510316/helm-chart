@@ -1,0 +1,15 @@
+# Default values for mod-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image: liyasthomas/postwoman
+tag: v1.9.9
+pullPolicy: IfNotPresent
+
+resources:
+  limits:
+    memory: "1024Mi"
+    cpu: "100m"
+
+service:
+  nodePort: 32110

@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-postwoman
+  labels:
+    app: postwoman
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postwoman
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: postwoman
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+      - name: postwoman
+        image: "{{ .Values.image }}:{{ .Values.tag }}"
+        imagePullPolicy: {{ .Values.pullPolicy }}
+        ports:
+          - containerPort: 3000
+            name: web
+        resources:
+{{ toYaml .Values.resources | indent 12 }} 
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 20
+          timeoutSeconds: 1       
+   
